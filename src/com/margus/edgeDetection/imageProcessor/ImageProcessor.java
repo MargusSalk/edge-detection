@@ -80,12 +80,7 @@ public class ImageProcessor {
 	
 	private List<NoiseReducerStrategy> noiseReducerStrategies(int width, int height) {
 		List<NoiseReducerStrategy> list = new ArrayList<NoiseReducerStrategy>();
-		
-//		list.add(new WithoutNeighbourStrategy(width, height, differences));
-//		list.add(new RectangleRadiusStrategy(width, height, differences, 5, 2));
-//		list.add(new RectangleRadiusStrategy(width, height, differences, 8, 3));
 		list.add(new IslandAreaStrategy(width, height, differences));
-//		list.add(new RectangleRadiusStrategy(width, height, differences, 8, 2));
 		
 		return list;
 	}
